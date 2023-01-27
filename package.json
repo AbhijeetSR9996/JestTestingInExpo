@@ -6,16 +6,30 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
+    "test": "jest",
+    "lint": "eslint .",
     "web": "expo start --web"
   },
   "dependencies": {
+    "@react-native-community/eslint-config": "^3.2.0",
+    "@testing-library/jest-native": "^5.4.1",
+    "@testing-library/react-native": "^11.5.1",
     "expo": "~47.0.12",
     "expo-status-bar": "~1.4.2",
+    "jest": "^27.5.1",
+    "jest-expo": "^47.0.1",
     "react": "18.1.0",
-    "react-native": "0.70.5"
+    "react-native": "0.70.5",
+    "react-native-svg-transformer": "^1.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"
+  },
+  "jest": {
+    "preset": "jest-expo",
+    "setupFilesAfterEnv": [
+      "./jest-setup-after-env.js"
+    ]
   },
   "private": true
 }
